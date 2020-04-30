@@ -1,8 +1,16 @@
 
-<label data-reflex="click->DemoReflex#toggle" data-checked="<%= @toggle %>">
-  <% if @toggle %>
-    <input type="checkbox" id="checkboxDemo" checked /> Checked
-  <% else %>
-    <input type="checkbox" /> Unchecked
-  <% end %>
-</label>
+<div data-reflex-root="#checkboxDemo" id="checkboxDemo">
+  <label data-reflex="click->DemoReflex#toggle" data-checked="<%= @toggle %>">
+    <% if @toggle %>
+      <input type="checkbox" checked /> Checked
+    <% else %>
+      <input type="checkbox" /> Unchecked
+    <% end %>
+  </label>
+</div>
+
+<hr />
+
+<div data-reflex-root="#counterDemo" id="counterDemo">
+  <b><%= @count %></b> <button data-reflex="click->CounterReflex#increment" data-count="<%= @count %>"> +1 </button>
+</div>

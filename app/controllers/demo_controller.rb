@@ -3,5 +3,6 @@
 class DemoController < ApplicationController
   def index
     @toggle ||= false
+    @count ||= 0
   end
 end
